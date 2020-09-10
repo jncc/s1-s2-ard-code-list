@@ -40,7 +40,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 ## Marine and Coastal Applications 
 
 ### Seagrass monitoring
-- example
+- add example
 
 ### Satellite-derived bathymetry
 - [IMECsentinel](https://github.com/GemmaH131/IMECsentinel)  Bathymetry from Sentinel-2 imagery to detect sandbanks in the southern North Sea. `R` `Newcastle-University`
@@ -61,7 +61,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 - [Bare peat mapping – random forest classification](https://github.com/duncansnh/Bare-peat/blob/master/Data_Split_Classification_.ipynb) - Script to perform supervised classification. Applied to bare peat classification on nationwide scale using Sentinel-2. `Python` `Nature.Scot`
 
 ### Upland mapping
-- example
+- add example
 
 ### Habitat mapping
 - [Living England habitat mapping](https://github.com/NE-EEOS/Living-England) - Satellite-based habitat mapping of England. `R` `Natural England`

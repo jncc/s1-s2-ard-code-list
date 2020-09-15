@@ -23,27 +23,27 @@ This list is a work in progress and we need your help to keep it up-to-date!  If
 
 |   [<b>Tutorials and functions</b>](#tutorials-and-functions )   | <br>
 
-|   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Seagrass monitoring](#seagrass-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   | <br>
+|   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Maerl monitoring](#maerl-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   | <br>
 
-|   [<b>Terrestrial Applications</b>](#terrestrial-applications)   |   [Habitat Change Detection](#habitat-change-detection)   |   [Peatland Mapping](#peatland-mapping)   |   [Upland mapping](#upland-mapping)   |  [habitat mapping](#habitat-mapping)   |
+|   [<b>Terrestrial Applications</b>](#terrestrial-applications)   |   [Habitat Change Detection](#habitat-change-detection)   |   [Peatland Mapping](#peatland-mapping)   |   [Upland mapping](#upland-mapping)   |  [Habitat mapping](#habitat-mapping)   |
    
 |   [GitHub accounts of relevant organisations](#GitHub-accounts-of-relevant-organisations)   |   [Other useful Earth Observation GitHub links](#other-useful-earth-observation-github-links)   |           
 
 <b>Start Here</b>
 
 ## Tutorials and functions 
-- Introduction to EODS API and creating a simple query. `Python` `Defra` `EODS-API`
-- Generate a list of S2 granules with least cloud per granule per orbit for a given date range and geographic area. `Python` `Defra` `EODS-API`
-- Clip raster, select single band from raster, re-project raster, create points from raster, and generate zonal statistics `Python` `Defra` `EODS-API` `WPS`
+- ['eods-api-example-simple-query'](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods-api-example-simple-query.ipynb). Introduction to the Defra EO Data Service API and creating a simple query. `Python` `Defra` `EODS-API`
+- ['eods-api-example-generate-cloudless-mosaic'](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods-api-example-generate-cloudless-mosaic.ipynb). Generate a list of Sentinel-2 granules with least cloud per granule per orbit for a given date range and geographic area. `Python` `Defra` `EODS-API`
+- [eods-api-example-wps'](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods-api-example-wps.ipynb).  Use web processing services (WPS) to clip raster, select single band from raster, re-project raster, create points from raster, and generate zonal statistics `Python` `Defra` `EODS-API` `WPS`
 - ['EODS_API'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API.ipynb) Download Sentinel-2 data via API from the Defra EO Data Service, then create a mosaic, clip to area of interest and create NDVI. `Python` `JNCC` `EODS-API` `WPS`
 - ['EODS_API_Best_pixel'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API_Best_pixel.ipynb).  Download Sentinel-2 data via API from the Defra EO Data Service, then create best-pixel composite using the pixels with least cloud in a stack of imagery from different dates `RSGISLib` `Python` `JNCC` `EODS-API` `WPS` 
-- ['habitat-condition-monitoring'](https://github.com/jncc/habitat-condition-monitoring).  A package of various functions involved in preparation, statistical analysis and modelling with Sentinel-1 and Sentinel-2 data, including cloud and shadow masking, calculating indices, creating thumbnails, generating zonal statistics and summarising these per polygon. `R` `JNCC`
+- ['habitat-condition-monitoring'](https://github.com/jncc/habitat-condition-monitoring).  A package of various functions involved in preparation, statistical analysis and modelling with Sentinel-1 and Sentinel-2 data, including cloud and shadow masking, calculating indices, creating thumbnails, generating zonal statistics and summarising these per polygon. `R` `JNCC` `copernicus-user-uptake`
 
 ---
 
 ## Marine and Coastal Applications 
 
-### Seagrass monitoring
+### Maerl monitoring
 - add example
 
 ### Satellite-derived bathymetry
@@ -54,7 +54,7 @@ This list is a work in progress and we need your help to keep it up-to-date!  If
 ## Terrestrial Applications
 
 ### Habitat Change Detection
- - Change detection – workflow for processing input data `R` `JNCC`
+ - Workflow for processing Sentinel-1 and Sentinel-2 with habitat map shapefiles to produce input data for change detection RShiny app.  There are separate workflows for [English sites](https://github.com/jncc/cuu-change-detection/blob/master/CUUCD_EnglishSites.Rmd), [Welsh sites](https://github.com/jncc/cuu-change-detection/blob/master/CUUCD_WelshSites.Rmd) and [Scottish sites](https://github.com/jncc/cuu-change-detection/blob/master/CUUCD_ScottishSites.Rmd). `R` `JNCC`
  - ['change-analysis-examples'](https://github.com/jncc/cuu-change-detection/blob/master/change_analysis_examples.Rmd) A short analysis of NDVI statistics generated from Sentinel-2 and how they can be used in conjunction with a habitat map shapefile to identify polygons which deviate from mean values by more than set thresholds. `R` `JNCC` `copernicus-user-uptake`
  - ['change-statistics-analysis'](https://github.com/jncc/cuu-change-detection/blob/master/change_statistics_analysis.Rmd). An interactive document demonstrating use of NDVI derived from Sentinel-2 in conjunction with a habitat map shapefile to identify polygons which deviate from mean values by more than set thresholds. `R` `JNCC` `copernicus-user-uptake`
  - Change detection RShiny App 2020 pilot `R` `JNCC`
@@ -90,10 +90,12 @@ This list is a work in progress and we need your help to keep it up-to-date!  If
 
 [Contribution guidelines for this project](CONTRIBUTING.md)
 
-[![CC BY 4.0][cc-by-shield]][cc-by]
+
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC_BY][cc-by-shield]
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 

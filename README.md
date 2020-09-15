@@ -10,9 +10,12 @@ A curated list supporting the use of Sentinel-1 and Sentinel-2 analysis-ready da
 ---
 
 # Project Background
-[JNCC](https://jncc.gov.uk/) are leading a project to help people use [Sentinel-1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1) and [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) analysis-ready data ([ARD](https://jncc.gov.uk/our-work/simple-ard-service-faqs/)) provided by the [Defra EO Data Service](https://defradigital.blog.gov.uk/2020/06/18/making-it-easier-to-access-and-use-earth-observation-data/) and the [CEDA Archive](http://archive.ceda.ac.uk/), with a particular focus on accessing data via API (application programming interfaces).  As part of this project, we have set up a public repository for sharing code in any language for processing or analysing Sentinel-1 and Sentinel-2 ARD.  We conducted a survey in July 2020 to gain a better understanding of user needs and inform the choice of code-sharing platform.  Based on the survey results and subsequent discussion with the project team and partners, there is consensus that the best option was to set up this curated list on GitHub.
+[JNCC](https://jncc.gov.uk/) are leading a project to help people use [Sentinel-1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1) and [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) analysis-ready data ([ARD](https://jncc.gov.uk/our-work/simple-ard-service-faqs/)) provided by the [Defra EO Data Service](https://defradigital.blog.gov.uk/2020/06/18/making-it-easier-to-access-and-use-earth-observation-data/) and the [CEDA Archive](http://archive.ceda.ac.uk/), with a particular focus on accessing data via API (application programming interfaces).  As part of this project, we have set up a public repository for sharing code in any language for processing or analysing Sentinel-1 and Sentinel-2 ARD.  We conducted a survey in July 2020 to gain a better understanding of user needs and inform the choice of code-sharing platform.  Based on the survey results and subsequent discussion with the project team and partners, it was agreed that the best option was to set up this curated list on GitHub.
 
 This project is funded by the Caroline Herschel Framework Partnership Agreement on [Copernicus User Uptake](https://jncc.gov.uk/our-work/copernicus-project/). 
+
+# How to contribute
+This list is a work in progress and we need your help to keep it up-to-date!  If you have examples of code for selecting, downloading, manipulating or analysing Sentinel-1 or Sentinel-2 ARD, please add them to the list by making a pull request.  See our [contribution guidelines](CONTRIBUTING.md) for details on how to do this. Thank you very much to everyone who has already contributed!
 
 ---
 
@@ -32,8 +35,9 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 - Introduction to EODS API and creating a simple query. `Python` `Defra` `EODS-API`
 - Generate a list of S2 granules with least cloud per granule per orbit for a given date range and geographic area. `Python` `Defra` `EODS-API`
 - Clip raster, select single band from raster, re-project raster, create points from raster, and generate zonal statistics `Python` `Defra` `EODS-API` `WPS`
-- Select and download S2 granules from EODS, then create mosaic, clip to area of interest and create NDVI. `Python` `JNCC` `EODS-API` `WPS`
-- Select and download S2 granules from EODS, then create best-pixel composite using `RSGISLib` `Python` `JNCC` `EODS-API` `WPS` `RSGISLib`
+- ['EODS_API'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API.ipynb) Download Sentinel-2 data via API from the Defra EO Data Service, then create a mosaic, clip to area of interest and create NDVI. `Python` `JNCC` `EODS-API` `WPS`
+- ['EODS_API_Best_pixel'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API_Best_pixel.ipynb).  Download Sentinel-2 data via API from the Defra EO Data Service, then create best-pixel composite using the pixels with least cloud in a stack of imagery from different dates `RSGISLib` `Python` `JNCC` `EODS-API` `WPS` 
+- ['habitat-condition-monitoring'](https://github.com/jncc/habitat-condition-monitoring).  A package of various functions involved in preparation, statistical analysis and modelling with Sentinel-1 and Sentinel-2 data, including cloud and shadow masking, calculating indices, creating thumbnails, generating zonal statistics and summarising these per polygon. `R` `JNCC`
 
 ---
 
@@ -51,7 +55,8 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 
 ### Habitat Change Detection
  - Change detection – workflow for processing input data `R` `JNCC`
- - Change detection Proof of Concept RShiny App `R` `JNCC`
+ - ['change-analysis-examples'](https://github.com/jncc/cuu-change-detection/blob/master/change_analysis_examples.Rmd) A short analysis of NDVI statistics generated from Sentinel-2 and how they can be used in conjunction with a habitat map shapefile to identify polygons which deviate from mean values by more than set thresholds. `R` `JNCC` `copernicus-user-uptake`
+ - ['change-statistics-analysis'](https://github.com/jncc/cuu-change-detection/blob/master/change_statistics_analysis.Rmd). An interactive document demonstrating use of NDVI derived from Sentinel-2 in conjunction with a habitat map shapefile to identify polygons which deviate from mean values by more than set thresholds. `R` `JNCC` `copernicus-user-uptake`
  - Change detection RShiny App 2020 pilot `R` `JNCC`
 
 ### Peatland Mapping
@@ -65,7 +70,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 
 ### Habitat mapping
 - [Living England habitat mapping](https://github.com/NE-EEOS/Living-England) - Satellite-based habitat mapping of England. `R` `Natural England`
-- [Commons Mapping](https://github.com/NE-EEOS/CommonsMapping) - awaiting description `R` `Natural England`
+- [Commons Mapping](https://github.com/NE-EEOS/CommonsMapping) - Commons mapping in England `R` `Natural England`
 - [Living Maps](https://github.com/NE-EEOS/LivingMaps) - Automated object-based classification using Random Forest for catchment pioneer `R` `Natural England`
 
 ---
@@ -78,6 +83,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 
 ## Other useful Earth Observation GitHub links
 - [Awesome-EO-Code](https://github.com/acgeospatial/awesome-earthobservation-code) - A curated list of awesome tools, tutorials, code, helpful projects, links, stuff about Earth Observation and Geospatial stuff! 
+- [Awesome-SAR](https://github.com/RadarCODE/awesome-sar) - A curated list of awesome synthetic aperture radar (SAR) software, libraries and resources.
 
 <b>End</b>
 
@@ -96,4 +102,4 @@ This work is licensed under a
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 
-###### Work in progress - links are still being added.
+

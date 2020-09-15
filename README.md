@@ -12,10 +12,12 @@ A curated list supporting the use of Sentinel-1 and Sentinel-2 analysis-ready da
 # Project Background
 [JNCC](https://jncc.gov.uk/) are leading a project to help people use [Sentinel-1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1) and [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) analysis-ready data ([ARD](https://jncc.gov.uk/our-work/simple-ard-service-faqs/)) provided by the [Defra EO Data Service](https://defradigital.blog.gov.uk/2020/06/18/making-it-easier-to-access-and-use-earth-observation-data/) and the [CEDA Archive](http://archive.ceda.ac.uk/), with a particular focus on accessing data via API (application programming interfaces).  As part of this project, we have set up a public repository for sharing code in any language for processing or analysing Sentinel-1 and Sentinel-2 ARD.  We conducted a survey in July 2020 to gain a better understanding of user needs and inform the choice of code-sharing platform.  Based on the survey results and subsequent discussion with the project team and partners, it was agreed that the best option was to set up this curated list on GitHub.
 
-This project is funded by the Caroline Herschel Framework Partnership Agreement on [Copernicus User Uptake](https://jncc.gov.uk/our-work/copernicus-project/). 
-
 # How to contribute
-This list is a work in progress and we need your help to keep it up-to-date!  If you have examples of code for selecting, downloading, manipulating or analysing Sentinel-1 or Sentinel-2 ARD, please add them to the list by making a pull request.  See our [contribution guidelines](CONTRIBUTING.md) for details on how to do this. Thank you very much to everyone who has already contributed!
+This list is a work in progress and we need your help to keep it up-to-date!  If you have examples of code for selecting, downloading, manipulating or analysing Sentinel-1 or Sentinel-2 ARD, please add them to the list by making a pull request.  See our [contribution guidelines](CONTRIBUTING.md) for details on how to do this. 
+
+# Acknowledgements
+Thank you very much to all the [authors](S1_S2_ARD_authors.txt) who have contributed their code to this list, and to [Andrew Cutts](https://github.com/acgeospatial) for help with setting up the list.
+This project is funded by the Caroline Herschel Framework Partnership Agreement on [Copernicus User Uptake](https://jncc.gov.uk/our-work/copernicus-project/). 
 
 ---
 
@@ -23,7 +25,7 @@ This list is a work in progress and we need your help to keep it up-to-date!  If
 
 |   [<b>Tutorials and functions</b>](#tutorials-and-functions )   | <br>
 
-|   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Maerl monitoring](#maerl-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   | <br>
+|   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Maerl monitoring](#maerl-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   |   [Intertidal extent mapping](#mapping-intertidal-extent) <br>
 
 |   [<b>Terrestrial Applications</b>](#terrestrial-applications)   |   [Habitat Change Detection](#habitat-change-detection)   |   [Peatland Mapping](#peatland-mapping)   |   [Upland mapping](#upland-mapping)   |  [Habitat mapping](#habitat-mapping)   |
    
@@ -44,10 +46,13 @@ This list is a work in progress and we need your help to keep it up-to-date!  If
 ## Marine and Coastal Applications 
 
 ### Maerl monitoring
-- add example
+- example coming soon
 
 ### Satellite-derived bathymetry
 - [IMECsentinel](https://github.com/GemmaH131/IMECsentinel)  Bathymetry from Sentinel-2 imagery to detect sandbanks in the southern North Sea. `R` `Newcastle-University`
+
+### Mapping intertidal extent
+- example coming soon
 
 ---
 

@@ -40,6 +40,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 - ['EODS_API'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API.ipynb) Download Sentinel-2 data via API from the Defra EO Data Service, then create a mosaic, clip to area of interest and create NDVI. `Python` `JNCC` `EODS-API` `WPS`
 - ['EODS_API_Best_pixel'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API_Best_pixel.ipynb).  Download Sentinel-2 data via API from the Defra EO Data Service, then create best-pixel composite using the pixels with least cloud in a stack of imagery from different dates `RSGISLib` `Python` `JNCC` `EODS-API` `WPS` 
 - ['habitat-condition-monitoring'](https://github.com/jncc/habitat-condition-monitoring).  A package of various functions involved in preparation, statistical analysis and modelling with Sentinel-1 and Sentinel-2 data, including cloud and shadow masking, calculating indices, creating thumbnails, generating zonal statistics and summarising these per polygon. `R` `JNCC` `copernicus-user-uptake`
+- [Generate coherence image from Sentinel-1](https://github.com/jncc/cuu-illegal-waste).  Please note this uses Sentinel-1 *Single Look Complex (SLC)* data, not the analysis-ready data processed by JNCC and Defra. XML script and supporting command line scripts to produce a coherence image from two SLC input datasets, enabling detection of ground surface changes over time. `JNCC` `SEPA` `copernicus-user-uptake`
 
 ---
 

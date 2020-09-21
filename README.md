@@ -23,7 +23,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 
 # Contents
 
-|   [<b>Tutorials and functions</b>](#tutorials-and-functions )   | <br>
+|   [<b>Tutorials and functions</b>](#tutorials-and-functions )   |    [Defra EO Data Service API](#defra-eo-data-service-api)    |    [CEDA API](ceda-api)    |    [Other functions](other-functions) <br>
 
 |   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Maerl monitoring](#maerl-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   |   [Intertidal extent mapping](#mapping-intertidal-extent) <br>
 
@@ -42,10 +42,15 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 - ['eods-api-example-wps'](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods-api-example-wps.ipynb).  Use web processing services (WPS) to clip raster, select single band from raster, re-project raster, create points from raster, and generate zonal statistics `Python` `Defra` `EODS-API` `WPS`
 - ['EODS_API'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API.ipynb) Download Sentinel-2 data via API from the Defra EO Data Service, then create a mosaic, clip to area of interest and create NDVI. `Python` `JNCC` `EODS-API` `WPS`
 - ['EODS_API_Best_pixel'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API_Best_pixel.ipynb).  Download Sentinel-2 data via API from the Defra EO Data Service, then create best-pixel composite using the pixels with least cloud in a stack of imagery from different dates `RSGISLib` `Python` `JNCC` `EODS-API` `WPS`
+- [config.py](https://github.com/MatthewMcDefra/EODS-API/blob/master/config.py). Config file for use with the above Jupyter Notebooks, e.g. to input your authentication token.
+- [environment.yml](https://github.com/MatthewMcDefra/EODS-API/blob/master/environment.yml).  Environment file for use with the Jupyter Notebooks in this section and the section below.
 #### EODS API Python library 
-*A module of library functions for programmatic interaction with the EO Data Service developed by Sam Franklin at CGI, together with three Jupyter Notebooks demonstrating applications of the library.*
+*A module of library functions for programmatic interaction with the EO Data Service developed by Sam Franklin at CGI, together with four Jupyter Notebooks demonstrating applications of the library for filtering, downloading and manipulating Sentinel-2 data.*
 - ['eodslib.py](https://github.com/MatthewMcDefra/EODS-API/blob/master/eodslib.py). Functions for interacting with the EO Data Service.  Examples include: keyword arguments for filtering data; finding the least cloudy Sentinel-2 granules; creating XML files for use in Web Processing Service (WPS) requests; submitting WPS requests; removing split Sentinel-2 granules from a dataframe; processing data downloaded via WPS (unzipping and renaming files, deleting zip files).
-- [eodslib.py example 1: simple query](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods%20example1%20-%20simple%20EODS%20query.ipynb)
+- [eodslib.py example 1: simple query](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods%20example1%20-%20simple%20EODS%20query.ipynb).  Apply filter parameters and return results as a dataframe.
+- [eodslib.py example 2: query and download](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods%20example2%20-%20query%20EODS%20and%20download%20results.ipynb).  Apply filter parameters and download returned data.
+- [eodslib.py example 3: query, download, optimise and mosaic](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods%20example3%20-%20query%20EODS%20-%20download%20results%20-%20optimise%20s2s%20-%20mosaic%20s2s.ipynb).  Apply filter parameters, download results, convert downloaded files to 'optimised' GEOTIFFs and mosaic the imagery by creating a virtual raster.
+- [eodslib.py example 4: query, download clipped area, calculate ndvi](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods%20example4%20-%20query%20eods%20-%20coveragecrop%20download%20-%20calc%20ndvi%20-%20plot%20ndvi.ipynb).  Apply filter parameters, download the returned data clipped to an area of interest, calculate and plot NDVI from the downloaded data. 
 ### CEDA API
 - examples coming soon
 ### Other functions 

@@ -34,11 +34,21 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 <b>Start Here</b>
 
 ## Tutorials and functions 
+### Defra EO Data Service API
+#### EODS API training materials
+*These Jupyter Notebooks were created as training materials to demonstrate use of the EO Data Service API. They were produced before the [EODS API Python Library](#eods-api-python-library) was developed. Many of the processes in these Notebooks can now be carried out more efficiently using the functions in the EODS API Python Library.*
 - ['eods-api-example-simple-query'](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods-api-example-simple-query.ipynb). Introduction to the Defra EO Data Service API and creating a simple query. `Python` `Defra` `EODS-API`
 - ['eods-api-example-generate-cloudless-mosaic'](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods-api-example-generate-cloudless-mosaic.ipynb). Generate a list of Sentinel-2 granules with least cloud per granule per orbit for a given date range and geographic area. `Python` `Defra` `EODS-API`
 - ['eods-api-example-wps'](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods-api-example-wps.ipynb).  Use web processing services (WPS) to clip raster, select single band from raster, re-project raster, create points from raster, and generate zonal statistics `Python` `Defra` `EODS-API` `WPS`
 - ['EODS_API'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API.ipynb) Download Sentinel-2 data via API from the Defra EO Data Service, then create a mosaic, clip to area of interest and create NDVI. `Python` `JNCC` `EODS-API` `WPS`
-- ['EODS_API_Best_pixel'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API_Best_pixel.ipynb).  Download Sentinel-2 data via API from the Defra EO Data Service, then create best-pixel composite using the pixels with least cloud in a stack of imagery from different dates `RSGISLib` `Python` `JNCC` `EODS-API` `WPS` 
+- ['EODS_API_Best_pixel'](https://github.com/jncc/defra-eo-data-service-api/blob/master/EODS_API_Best_pixel.ipynb).  Download Sentinel-2 data via API from the Defra EO Data Service, then create best-pixel composite using the pixels with least cloud in a stack of imagery from different dates `RSGISLib` `Python` `JNCC` `EODS-API` `WPS`
+#### EODS API Python library 
+*A module of library functions for programmatic interaction with the EO Data Service developed by Sam Franklin at CGI, together with three Jupyter Notebooks demonstrating applications of the library.*
+- ['eodslib.py](https://github.com/MatthewMcDefra/EODS-API/blob/master/eodslib.py). Functions for interacting with the EO Data Service.  Examples include: keyword arguments for filtering data; finding the least cloudy Sentinel-2 granules; creating XML files for use in Web Processing Service (WPS) requests; submitting WPS requests; removing split Sentinel-2 granules from a dataframe; processing data downloaded via WPS (unzipping and renaming files, deleting zip files).
+- [eodslib.py example 1: simple query](https://github.com/MatthewMcDefra/EODS-API/blob/master/eods%20example1%20-%20simple%20EODS%20query.ipynb)
+### CEDA API
+- examples coming soon
+### Other functions 
 - ['habitat-condition-monitoring'](https://github.com/jncc/habitat-condition-monitoring).  A package of various functions involved in preparation, statistical analysis and modelling with Sentinel-1 and Sentinel-2 data, including cloud and shadow masking, calculating indices, creating thumbnails, generating zonal statistics and summarising these per polygon. `R` `JNCC` `copernicus-user-uptake`
 - [Generate coherence image from Sentinel-1](https://github.com/jncc/cuu-illegal-waste).  Please note this uses Sentinel-1 *Single Look Complex (SLC)* data, not the analysis-ready data processed by JNCC and Defra. XML script and supporting command line scripts to produce a coherence image from two SLC input datasets, enabling detection of ground surface changes over time. `JNCC` `SEPA` `copernicus-user-uptake`
 

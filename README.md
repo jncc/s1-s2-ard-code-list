@@ -27,7 +27,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 
 |   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Maerl monitoring](#maerl-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   |   [Intertidal extent mapping](#mapping-intertidal-extent) <br>
 
-|   [<b>Terrestrial Applications</b>](#terrestrial-applications)   |   [Habitat Change Detection](#habitat-change-detection)   |   [Peatland Mapping](#peatland-mapping)   |   [Upland mapping](#upland-mapping)   |  [Habitat mapping](#habitat-mapping)   |
+|   [<b>Terrestrial Applications</b>](#terrestrial-applications)   |   [Habitat Change Detection](#habitat-change-detection)   |   [Peatland Mapping](#peatland-mapping)   |   [Burn mapping](#burn-mapping)   |  [Habitat mapping](#habitat-mapping)   |
    
 |   [GitHub accounts of relevant organisations](#GitHub-accounts-of-relevant-organisations)   |   [Other useful Earth Observation GitHub links](#other-useful-earth-observation-github-links)   |           
 
@@ -94,8 +94,11 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
     - Humberhead NNR, England [fine-scale mapping](https://github.com/jncc/cuu-peatland-mapping/blob/master/site%20docs/NE_Humberhead_Fine.Rmd) and [time-series modelling](https://github.com/jncc/cuu-peatland-mapping/blob/master/site%20docs/NE_Humberhead_Broad.Rmd)
     - Brecon Beacons, Wales [fine-scale mapping](https://github.com/jncc/cuu-peatland-mapping/blob/master/site%20docs/WG_Brecon_Fine.Rmd) and [time-series modelling](https://github.com/jncc/cuu-peatland-mapping/blob/master/site%20docs/WG_Brecon_Broad.Rmd).
 
-### Upland mapping
-- add example
+### Burn mapping
+*Background to burn mapping*
+- add link and description
+- add link and description
+- add link and description
 
 ### Habitat mapping
 - [Living England habitat mapping](https://github.com/NE-EEOS/Living-England) - Satellite-based habitat mapping of England. `R` `Natural England`

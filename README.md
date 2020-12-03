@@ -97,9 +97,9 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 ### Burn mapping
 Code developed by Nature.Scot as part of the Copernicus User Uptake project on upland burn mapping from Sentinel 2.
 The code has been developed in Python in Jupyter notebooks designed to work in a Google Colabs environment, though it should only need minor changes to work in other environments.  Project still in progress so code may change.
-- https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_indices.ipynb - Script to create indices from ARD of 10 bands from Sentinel 2. Creates rasters float 32.
-- https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_pixel_box_plots.ipynb - Script to extract pixel values from a raster relating to a set of training polygons and then generate box plots using seaborn python package.
-- https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_image_thresholding.ipynb - Script to threshold an input image based on one or more spectral index thresholds
+- [Burn extent indices](https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_indices.ipynb) - Script to create indices from ARD of 10 bands from Sentinel 2. Creates rasters float 32. `copernicus-user-uptake` `Python` `Nature.Scot`
+- [Burn extent box plots of pixel values](https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_pixel_box_plots.ipynb) - Script to extract pixel values from a raster relating to a set of training polygons and then generate box plots using seaborn python package. `copernicus-user-uptake` `Python` `Nature.Scot`
+- [Burn extent image thresholding](https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_image_thresholding.ipynb) - Script to threshold an input image based on one or more spectral index thresholds `copernicus-user-uptake` `Python` `Nature.Scot`
 
 ### Habitat mapping
 - [Living England habitat mapping](https://github.com/NE-EEOS/Living-England) - Satellite-based habitat mapping of England. `R` `Natural England`

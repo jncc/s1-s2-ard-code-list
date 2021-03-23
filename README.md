@@ -102,6 +102,13 @@ The code has been developed in Python in Jupyter notebooks designed to work in a
 - [Burn extent box plots of pixel values](https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_pixel_box_plots.ipynb) - Script to extract pixel values from a raster relating to a set of training polygons and then generate box plots using seaborn python package. `copernicus-user-uptake` `Python` `Nature.Scot`
 - [Burn extent image thresholding](https://github.com/duncansnh/burn-mapping/blob/master/CUU_burn_extent_image_thresholding.ipynb) - Script to threshold an input image based on one or more spectral index thresholds `copernicus-user-uptake` `Python` `Nature.Scot`
 
+Code developed by Pixalytics and EnviroSAR for the Defra EO Centre of Excellence R&D project: 'Upland Burn Detection with Radar'
+A [set of Jupyter notebooks and example data](https://github.com/pixalytics-ltd/upland-burn-detection) to: 
+- download Sentinel-1 ARD for a user-defined area and timeframe `Python` `Defra`
+- process Sentinel-1 coherence data for a user-defined area and timeframe `Python` `Defra`
+- analyse the ARD and coherence data and generate an interactive map of burns `Python` `Defra`
+- automate detection of burns from Sentinel-1 data based on threshold values `Python` `Defra`
+
 ### Habitat mapping
 - [Living England habitat mapping](https://github.com/NE-EEOS/Living-England) - Satellite-based habitat mapping of England. `R` `Natural England`
 - [Commons Mapping](https://github.com/NE-EEOS/CommonsMapping) - Commons mapping in England `R` `Natural England`

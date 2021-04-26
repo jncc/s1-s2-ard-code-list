@@ -68,7 +68,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 - [IMECsentinel](https://github.com/GemmaH131/IMECsentinel)  Bathymetry from Sentinel-2 imagery to detect sandbanks in the southern North Sea. `R` `Newcastle-University`
 
 ### Mapping intertidal extent
-- example coming soon
+- [Coast X-Ray](https://github.com/jamesfitton/cxr) generates Normalised Difference Water Index for a time-series of Sentinel-2 images to calculate the frequency of water occurrence across the intertidal zone. This approach was developed by the Scottish [Dynamic Coast](http://www.dynamiccoast.com/) project. The full method is published in [Remote Sensing Applications](https://www.sciencedirect.com/science/article/pii/S2352938521000355) `Python`
 
 ---
 

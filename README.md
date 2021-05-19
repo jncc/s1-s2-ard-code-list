@@ -23,7 +23,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 
 # Contents
 
-|   [<b>Tutorials and functions</b>](#tutorials-and-functions )   |    [Defra EO Data Service API](#defra-eo-data-service-api)    |    [CEDA API](ceda-api)    |    [Other functions](other-functions) <br>
+|   [<b>Tutorials and functions</b>](#tutorials-and-functions )   |    [Defra EO Data Service API](#defra-eo-data-service-api)    |    [CEDA Data Access](#ceda-data-access)    |    [Other functions](other-functions) <br>
 
 |   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Maerl monitoring](#maerl-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   |   [Intertidal extent mapping](#mapping-intertidal-extent) <br>
 
@@ -51,8 +51,8 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 - [eodslib.py example 2: query and download](https://github.com/defra-data/EODS-API/blob/master/eods%20example2%20-%20query%20EODS%20and%20download%20results.ipynb).  Apply filter parameters and download returned data. `Python` `Defra` `EODS-API` `WPS`
 - [eodslib.py example 3: query, download, optimise and mosaic](https://github.com/defra-data/EODS-API/blob/master/eods%20example3%20-%20query%20EODS%20-%20download%20results%20-%20optimise%20s2s%20-%20mosaic%20s2s.ipynb).  Apply filter parameters, download results, convert downloaded files to 'optimised' GEOTIFFs and mosaic the imagery by creating a virtual raster. `Python` `Defra` `EODS-API` `WPS`
 - [eodslib.py example 4: query, download clipped area, calculate ndvi](https://github.com/defra-data/EODS-API/blob/master/eods%20example4%20-%20query%20eods%20-%20coveragecrop%20download%20-%20calc%20ndvi%20-%20plot%20ndvi.ipynb).  Apply filter parameters, download the returned data clipped to an area of interest, calculate and plot NDVI from the downloaded data. `Python` `Defra` `EODS-API` `WPS`
-### CEDA API
-- examples coming soon
+### CEDA Data Access
+- [Accessing ARD over HTTP using geotiff.js](https://github.com/jncc/s1-s2-ard-code-list/tree/master/code/geotiffjs_example)  This example shows the process of creating true colour Sentinel-2 thumbnails using ARD hosted in the CEDA Archive.
 ### Other functions 
 - ['habitat-condition-monitoring'](https://github.com/jncc/habitat-condition-monitoring).  A package of various functions involved in preparation, statistical analysis and modelling with Sentinel-1 and Sentinel-2 data, including cloud and shadow masking, calculating indices, creating thumbnails, generating zonal statistics and summarising these per polygon. `R` `JNCC` `copernicus-user-uptake`
 - [Generate coherence image from Sentinel-1](https://github.com/jncc/cuu-illegal-waste).  Please note this uses Sentinel-1 *Single Look Complex (SLC)* data, not the analysis-ready data processed by JNCC and Defra. XML script and supporting command line scripts to produce a coherence image from two SLC input datasets, enabling detection of ground surface changes over time. `JNCC` `SEPA` `copernicus-user-uptake`

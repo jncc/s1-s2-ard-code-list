@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/geotiff"></script>
+    </head>
+    <body>
+        <h1>Sentinel 2 thumbnail example with geotiff.js</h1>
+        <p>The thumbnail may take a few seconds to load...</p>
+        <div id="thumbnail"></div>
+
+        <script>
+            const url = 'https://dap.ceda.ac.uk/neodc/sentinel_ard/data/sentinel_2/2020/08/12/S2B_20200812_lat54lon217_T30UWE_ORB037_utm30n_osgb_vmsk_sharp_rad_srefdem_stdsref.tif';
+            const thumbnailBbox = [356740, 357520, 468685, 469465];
+
+            (async function() {
+                let tiff = await GeoTIFF.fromUrl(url);
+                let image = await tiff.getImage();
+                let samplesPerPixel = await image.getSamplesPerPixel();
+
+                console.log(`No of bands: ${samplesPerPixel}`);
+                for (let i = 0; i < samplesPerPixel; i++) {
+                    let band = await image.getGDALMetadata(i);
+                    console.log(`Band ${i}: ${band['DESCRIPTION']}`);
+                }
+
+                let bbox = await image.getBoundingBox();
+                console.log(`Image bounding box: ${JSON.stringify(bbox)}`);
+
+                let pixelBbox = getPixelBboxForThumbnail(thumbnailBbox, bbox, image.getWidth(), image.getHeight());
+                let rgbBands = [2, 1, 0];
+
+                let data = await image.readRasters({ 
+                    window: pixelBbox,
+                    samples: rgbBands
+                });
+                
+                let div = document.getElementById('thumbnail')
+                let base64Image = getBase64Image(data)
+                let imageElement = new Image(100, 100)
+                imageElement.src = base64Image
+
+                div.appendChild(imageElement)
+            })()
+
+            function getPixelBboxForThumbnail(thumbnailOsgbBbox, ardOsgbBbox, ardPixelWidth, ardPixelHeight) {
+                let ardXmin = ardOsgbBbox[0]
+                let ardXmax = ardOsgbBbox[2]
+                let ardYmin = ardOsgbBbox[1]
+                let ardYmax = ardOsgbBbox[3]
+
+                let thumbnailXmin = thumbnailOsgbBbox[0]
+                let thumbnailXmax = thumbnailOsgbBbox[1]
+                let thumbnailYmin = thumbnailOsgbBbox[2]
+                let thumbnailYmax = thumbnailOsgbBbox[3]
+
+                let bboxXRange = ardXmax - ardXmin
+                let bboxYRange = ardYmax - ardYmin
+
+                let xMinPixel = Math.round(((thumbnailXmin - ardXmin) / bboxXRange)*ardPixelWidth)
+                let xMaxPixel = Math.round(((thumbnailXmax - ardXmin) / bboxXRange)*ardPixelWidth)
+                let yMinPixel = Math.round((1-((thumbnailYmax - ardYmin) / bboxYRange))*ardPixelHeight)
+                let yMaxPixel = Math.round((1-((thumbnailYmin - ardYmin) / bboxYRange))*ardPixelHeight)
+
+                let pixelBbox = [xMinPixel, yMinPixel, xMaxPixel, yMaxPixel]
+
+                return pixelBbox
+            }
+
+            function getBase64Image(data) {
+                let thumbnailPixelHeight = data.height
+                let thumbnailPixelWidth = data.width
+
+                let canvas = document.createElement('canvas')
+                canvas.width = thumbnailPixelWidth
+                canvas.height = thumbnailPixelHeight
+
+                let ctx = canvas.getContext("2d")
+
+                let totalPixelCount = 0
+                for (let y = 0; y < thumbnailPixelHeight; y++) {
+                    for (let x = 0; x < thumbnailPixelWidth; x++) {
+                        let colour = 'rgb(0, 0, 0, 0)' // let the default be no data (transparent)
+
+                        if (data[0][totalPixelCount] && data[1][totalPixelCount] && data[2][totalPixelCount]) {
+                            let red = data[0][totalPixelCount]
+                            let green = data[1][totalPixelCount]
+                            let blue = data[2][totalPixelCount]
+                            colour = `rgb(${red}, ${green}, ${blue}, 1)`
+                        }
+                        
+                        ctx.fillStyle = colour
+                        ctx.fillRect(x, y, 1, 1)
+
+                        totalPixelCount++
+                    }
+                }
+
+                let canvasImage = canvas.toDataURL("image/png")
+                return canvasImage
+            }
+        </script>
+    </body>
+</html>

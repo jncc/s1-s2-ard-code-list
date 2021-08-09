@@ -112,9 +112,7 @@ A [set of Jupyter notebooks and example data](https://github.com/pixalytics-ltd/
 - automate detection of burns from Sentinel-1 data based on threshold values `Python` `Defra`
 
 ### Habitat mapping
-- [Living England habitat mapping](https://github.com/NE-EEOS/Living-England) - Satellite-based habitat mapping of England. `R` `Natural England`
-- [Commons Mapping](https://github.com/NE-EEOS/CommonsMapping) - Commons mapping in England `R` `Natural England`
-- [Living Maps](https://github.com/NE-EEOS/LivingMaps) - Automated object-based classification using Random Forest for catchment pioneer `R` `Natural England`
+- The Living England project, led by Natural England, is a multi-year programme delivering a satellite-derived national habitat layer in support of the Environmental Land Management System (ELMS) and the National Capital and Ecosystem Assessment (NCEA) Pilot. The project uses European Space Agency Sentinel-1 and Senetinel-2 imagery, alongside additional open source datasets, within a Random Forest machine learning algorithm to classify land segments into one of a defined list of habitat classes (currently UKBAP), achieving an accuracy of 84% for the latest iteration (2019/20). For further information please contact earth.observation@naturalengland.org.uk quoting "Living England" in the subject line. `R` `Natural England`
 
 ---
 

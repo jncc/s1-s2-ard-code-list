@@ -27,7 +27,7 @@ This project is funded by the Caroline Herschel Framework Partnership Agreement 
 
 |   [<b>Marine and Coastal Applications</b>](#marine-and-coastal-applications)   |   [Maerl monitoring](#maerl-monitoring)   |   [Satellite-derived bathymetry](#satellite-derived-bathymetry)   |   [Intertidal extent mapping](#mapping-intertidal-extent) <br>
 
-|   [<b>Terrestrial Applications</b>](#terrestrial-applications)   |   [Habitat Change Detection](#habitat-change-detection)   |   [Peatland Mapping](#peatland-mapping)   |   [Burn mapping](#burn-mapping)   |  [Habitat mapping](#habitat-mapping)   |
+|   [<b>Terrestrial Applications</b>](#terrestrial-applications)   |   [Habitat Change Detection](#habitat-change-detection)   |   [Peatland Mapping](#peatland-mapping)   |   [Burn mapping](#burn-mapping)   |  [Habitat mapping](#habitat-mapping)   |    [Water body monitoring](#water-body-monitoring)  <br>
    
 |   [GitHub accounts of relevant organisations](#GitHub-accounts-of-relevant-organisations)   |   [Other useful Earth Observation GitHub links](#other-useful-earth-observation-github-links)   |           
 
@@ -113,6 +113,9 @@ A [set of Jupyter notebooks and example data](https://github.com/pixalytics-ltd/
 
 ### Habitat mapping
 - The Living England project, led by Natural England, is a multi-year programme delivering a satellite-derived national habitat layer in support of the Environmental Land Management System (ELMS) and the National Capital and Ecosystem Assessment (NCEA) Pilot. The project uses European Space Agency Sentinel-1 and Senetinel-2 imagery, alongside additional open source datasets, within a Random Forest machine learning algorithm to classify land segments into one of a defined list of habitat classes (currently UKBAP), achieving an accuracy of 84% for the latest iteration (2019/20). For further information please contact earth.observation@naturalengland.org.uk quoting "Living England" in the subject line. `R` `Natural England`
+
+### Water body monitoring
+- [Monitoring extent of water bodies using Sentinel-1](https://github.com/karensnh/Monitoring-extent-of-water-bodies-using-Sentinel-1) scripts developed by [NatureScot](https://www.nature.scot/) can be used for classification of Sentinel-1 on JASMIN using the ARD held on CEDA. Delineating land/water boundaries has many applications including flood mapping and monitoring habitat for aquatic species. `Python` `NatureScot`
 
 ---
 
